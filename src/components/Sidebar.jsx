@@ -12,10 +12,17 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-         
-
           <button className="close-btn" type="button" onClick={closeSidebar}>
-            boton
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill=" #8b1717"
+              className="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
           </button>
         </div>
         <ul className="links" onClick={closeSidebar}>
@@ -46,17 +53,22 @@ const SidebarContainer = styled.div`
     margin-top: 0.2rem;
   }
 
-  .links {
-    margin-bottom: 2rem;
-  }
+.links{
+  margin-left:-21px;
+}
+
   .links a {
-    text-decoration: none;
     display: block;
+    text-decoration: none;
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: capitalize;
-    padding: 1rem 1.5rem;
     color: black;
+    border-left: solid black 2px;
+    margin: 1rem;
+    padding-left: 1rem;
+    margin-left: -10px;
+    background-image: linear-gradient(to left, #f0bd6b, #f0bd6baf);
   }
 
   .sidebar {
@@ -65,7 +77,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #89385cdd;
+    background: #ffbba8ab;
     transition: 0.5s;
     transform: translate(-100%);
     z-index: -1;
@@ -76,7 +88,6 @@ const SidebarContainer = styled.div`
   }
 
   .logo {
- 
   }
 
   @media screen and (min-width: 992px) {

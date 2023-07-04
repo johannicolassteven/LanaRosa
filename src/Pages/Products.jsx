@@ -27,10 +27,11 @@ const ProductsPage = () => {
 };
 
 const Wrapper = styled.section`
+min-width: 390px;
   .container {
     ul {
       list-style: none;
-      margin-left: -50px;
+      margin-left: -30px;
     }
     li {
       margin: 1rem;

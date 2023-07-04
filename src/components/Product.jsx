@@ -11,12 +11,12 @@ const Product = ({ imagen1,imagen2, name, precio }) => {
           <img src={imagen2} className="imagen2" alt={name}></img>
         </div>
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+          <h5 className="title">{name}</h5>
           <p className="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" className="btn btn-primary">
+          <a href="#" className="btn btn-primary ">
             {precio}
           </a>
         </div>
@@ -26,10 +26,10 @@ const Product = ({ imagen1,imagen2, name, precio }) => {
 };
 
 const Wrapper = styled.section`
-
+  justify-content: center;
   .card {
     display: flex;
-    background-color: #ea075378;
+    background-color: #ffbba8;
     justify-content: center;
     img {
       width: 10rem;
@@ -41,29 +41,32 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: -3rem ;
+    margin-bottom: -5rem ;
   }
 
-  .card-title{
+  .title{
     display : flex;
     justify-content: center;
-    height: 2rem;
-    width: 20rem;
-    margin:0;
-    color: white;
+    width: 100%;    margin:0;
+    font-weight: bold;
   }
   .card-body{
-    color:white;
-    background-image: linear-gradient( transparent, #323232);
+    color:black;
+    background-color: #ffffff45;
+    background-image: linear-gradient( transparent, #464646);
 
 
   }
-  .btn{
+  .btn-primary{
     display: flex;
     justify-content: center;
-    background-color: #ea075378;
+    background-color: #f0bd6baf;
     border-color: black;
   }
+  .btn-primary:active{
+    background-color: #8d7041ae;
+  }
+
 `;
 
 export default Product;
