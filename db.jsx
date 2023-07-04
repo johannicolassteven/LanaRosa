@@ -1,5 +1,4 @@
-{
-  "Tops": [
+export const tops = [
     {
       "id": 1,
       "name": "Top Negro",
@@ -34,4 +33,4 @@
       "imagen1": "https://i.ibb.co/WD8kWXm/Morado1.jpg",
     }
   ]
-}
+
