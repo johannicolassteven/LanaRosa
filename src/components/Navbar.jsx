@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { useProductsContext } from "../context/products-context";
 
@@ -8,7 +9,7 @@ const Navbar = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-        <button className="nav-toggle" type="button" onClick={openSidebar}>
+          <button className="nav-toggle" type="button" onClick={openSidebar}>
             boton
           </button>{" "}
           <img
@@ -17,9 +18,9 @@ const Navbar = () => {
           ></img>
         </div>
         <ul className="nav-links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Products</li>
+          <Link to="/">Home</Link>
+          <Link to="/about">Sobre LanaRosa</Link>
+          <Link to="/products">Productos</Link>
         </ul>
       </div>
     </NavContainer>
