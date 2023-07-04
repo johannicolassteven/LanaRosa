@@ -1,7 +1,7 @@
 
 import React, { useContext, useEffect, useReducer } from 'react'
 import reducer from './products-reducer.jsx'
-import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from '../utils/actions.js'
+import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from '../utils/actions.jsx'
 
 const initialState = {
   isSidebarOpen: false,
