@@ -19,7 +19,7 @@ const Sidebar = () => {
           </button>
         </div>
         <ul className="links" onClick={closeSidebar}>
-          <Link to="/">Home</Link>
+          <Link to="/">Hogar</Link>
           <Link to="/about">Sobre LanaRosa</Link>
           <Link to="/products">Productos</Link>
         </ul>

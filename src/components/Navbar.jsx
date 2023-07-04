@@ -18,7 +18,7 @@ const Navbar = () => {
           ></img>
         </div>
         <ul className="nav-links">
-          <Link to="/">Home</Link>
+          <Link to="/">Hogar</Link>
           <Link to="/about">Sobre LanaRosa</Link>
           <Link to="/products">Productos</Link>
         </ul>
