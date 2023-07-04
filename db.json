@@ -1,0 +1,9 @@
+{
+ "Top1" : {
+    "id" : 1,
+    "Color" : "Negro",
+    "Precio" : 50.000,
+    "Imagen1" : "https://i.ibb.co/s6gThXB/Negro1.jpg",
+    "Imagen2" : "https://i.ibb.co/1RkTfhj/Negro2.jpg"
+ }
+}
