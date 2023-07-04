@@ -1,4 +1,4 @@
-import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from "../utils/actions";
+import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from "../Utils/actions";
 
 const reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN){
