@@ -1,3 +1,5 @@
-import React from "react"
-
-export const products_url = "http://localhost:3000/tops"
+colores = [
+    #464646 gris
+    #f0bd6b; Rosado
+    #ffbba8; amarillo
+]

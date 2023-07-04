@@ -24,10 +24,7 @@ const Navbar = () => {
               />
             </svg>
           </button>{" "}
-          <img
-            src="https://i.ibb.co/fkpnj7q/Logo.jpg"
-            alt="logo principal"
-          ></img>
+          
         </div>
         <ul className="nav-links">
           <Link to="/">Hogar</Link>

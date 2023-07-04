@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
 import { styled } from "styled-components";
 import { tops } from "../../db";
+import PageHero from "../components/Hero";
 
 const ProductsPage = () => {
   return (
+    <>
+    <PageHero title="Productos"></PageHero>
     <Wrapper>
       <div className="container">
         <ul>
@@ -22,7 +25,7 @@ const ProductsPage = () => {
           })}
         </ul>
       </div>
-    </Wrapper>
+    </Wrapper></>
   );
 };
 

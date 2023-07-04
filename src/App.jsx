@@ -1,9 +1,10 @@
-import ProductsPage from './Pages/Products'
+import ProductsPage from './Pages/ProductsPage'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
+import SingleProduct from './Pages/SingleProductPage'
 
 function App() {
   
@@ -15,6 +16,8 @@ function App() {
     <Route path='/' element={<HomePage/>} />
     <Route path='/about' element={<AboutPage/>} />
     <Route path='/products' element={<ProductsPage/>} />
+    <Route path='/products:/id' element={<SingleProduct/>} />
+
     </Routes>
   
   </Router>

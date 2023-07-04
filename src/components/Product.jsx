@@ -1,8 +1,9 @@
 import React from "react";
 import { styled } from "styled-components";
 import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
-const Product = ({ imagen1,imagen2, name, precio }) => {
+const Product = ({ id, imagen1,imagen2, name, precio }) => {
   return (
     <Wrapper>
       <div className="card">
@@ -16,9 +17,10 @@ const Product = ({ imagen1,imagen2, name, precio }) => {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" className="btn btn-primary ">
+          <Link to={`/products/${id}`}
+          className="btn btn-primary ">
             {precio}
-          </a>
+          </Link>
         </div>
       </div>
     </Wrapper>
@@ -65,6 +67,7 @@ const Wrapper = styled.section`
   }
   .btn-primary:active{
     background-color: #8d7041ae;
+    border-color: black;
   }
 
 `;
