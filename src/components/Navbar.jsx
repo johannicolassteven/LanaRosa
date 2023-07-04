@@ -1,21 +1,25 @@
 import React from "react";
 import { styled } from "styled-components";
+import { useProductsContext } from "../context/products-context";
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
   return (
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
+        <button className="nav-toggle" type="button" onClick={openSidebar}>
+            boton
+          </button>{" "}
           <img
             src="https://i.ibb.co/fkpnj7q/Logo.jpg"
             alt="logo principal"
           ></img>
-          <button type="button" className="nav-toggle"></button>
         </div>
         <ul className="nav-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Products</li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Products</li>
         </ul>
       </div>
     </NavContainer>
@@ -36,7 +40,7 @@ const NavContainer = styled.nav`
   .nav-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     img {
       width: 175px;
     }
@@ -44,7 +48,6 @@ const NavContainer = styled.nav`
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: var(--clr-primary-5);
     cursor: pointer;
     svg {
       font-size: 2rem;

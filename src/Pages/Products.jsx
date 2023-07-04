@@ -10,10 +10,10 @@ const ProductsPage = () => {
         <ul>
           {tops.map((top, index) => {
             return (
-              <li>
+              <li  key={top.id}>
                 <Product
-                  key={top.id}
                   imagen1={top.imagen1}
+                  imagen2={top.imagen2}
                   name={top.name}
                   precio={top.precio}
                 />

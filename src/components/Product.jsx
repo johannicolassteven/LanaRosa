@@ -2,13 +2,13 @@ import React from "react";
 import { styled } from "styled-components";
 import "bootstrap/dist/css/bootstrap.css";
 
-const Product = ({ imagen1, name, precio }) => {
+const Product = ({ imagen1,imagen2, name, precio }) => {
   return (
     <Wrapper>
       <div className="card">
         <div className="img-container">
           <img src={imagen1} className="card-img-top" alt={name}></img>
-          <img src={imagen1} className="imagen2" alt={name}></img>
+          <img src={imagen2} className="imagen2" alt={name}></img>
         </div>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
