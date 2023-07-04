@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/28/La_Rosa_Macaroni_logo_01.png"
+            src="https://i.ibb.co/fkpnj7q/Logo.jpg"
             alt="logo principal"
           ></img>
           <button type="button" className="nav-toggle"></button>
@@ -39,7 +39,6 @@ const NavContainer = styled.nav`
     justify-content: space-between;
     img {
       width: 175px;
-      margin-left: -15px;
     }
   }
   .nav-toggle {

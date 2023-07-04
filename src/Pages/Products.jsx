@@ -4,38 +4,39 @@ import { styled } from "styled-components";
 import { tops } from "../../db";
 
 const ProductsPage = () => {
-
   return (
-    <main>
+    <Wrapper>
       <div className="container">
-        {!tops
-          ? "cargando..."
-          : tops.map((top, index) => {
-              return (
+        <ul>
+          {tops.map((top, index) => {
+            return (
+              <li>
                 <Product
                   key={top.id}
                   imagen1={top.imagen1}
                   name={top.name}
                   precio={top.precio}
                 />
-              );
-            })}
+              </li>
+            );
+          })}
+        </ul>
       </div>
-    </main>
+    </Wrapper>
   );
 };
 
-const main = styled.section`
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+const Wrapper = styled.section`
   .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    ul {
+      list-style: none;
+      margin-left: -50px;
+    }
+    li {
+      margin: 1rem;
+    }
   }
+
   @media (min-width: 992px) {
   }
 `;

@@ -31,6 +31,7 @@ export const tops = [
       "Color": "Blanco",
       "precio": "55.000",
       "imagen1": "https://i.ibb.co/WD8kWXm/Morado1.jpg",
+      "Imagen2": "https://i.ibb.co/1RkTfhj/Negro2.jpg"
     }
   ]
 
