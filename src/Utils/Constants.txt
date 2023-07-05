@@ -1,5 +1,0 @@
-colores = [
-    #464646 gris
-    #f0bd6b; Rosado
-    #ffbba8; amarillo
-]
