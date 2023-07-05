@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import { services } from '../Utils/constants'
+import React from "react";
+import styled from "styled-components";
+import { services } from "../Utils/constants";
 
 const Services = () => {
   return (
     <Wrapper>
-      <div className='section-center'>
-        <article className='header'>
+      <div className="section-center">
+        <article className="header">
           <h3>
-            custom furniture <br /> built only for you
+            custom dessins <br /> built only for you
           </h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -16,27 +16,27 @@ const Services = () => {
             dolore aut vero consequuntur.
           </p>
         </article>
-        <div className='services-center'>
+        <div className="services-center">
           {services.map((service) => {
-            const { id, title, text } = service
+            const { id, title, text , icon} = service;
             return (
-              <article className='service' key={id}>
+              <article className="service" key={id}>
                 <h4>{title}</h4>
+                <span>{icon}</span>
                 <p>{text}</p>
               </article>
-            )
+            );
           })}
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
-
-    .section-center{
-        margin: 0 2rem;
-    }
+  .section-center {
+    margin: 0 2rem;
+  }
 
   h3,
   h4 {
@@ -44,7 +44,7 @@ const Wrapper = styled.section`
   }
   padding: 5rem 0;
 
-  background: #5eb6b932;;
+  background: #5eb6b932;
 
   .header h3 {
     margin-bottom: 2rem;
@@ -60,28 +60,27 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
+  
     background: #ab755f99;
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 50px;
     p {
+      margin-top: -2rem;
+      display: flex;
       color: black;
     }
   }
   span {
-    width: 4rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
     display: grid;
     margin: 0 auto;
     place-items: center;
-    margin-bottom: 1rem;
     border-radius: 50%;
-    background: white;
-    color: aliceblue;
-    svg {
-      font-size: 2rem;
-    }
+    background:#ab755f41;
   }
+
   @media (min-width: 992px) {
     .header {
       display: grid;
@@ -99,5 +98,5 @@ const Wrapper = styled.section`
       transform: translateY(5rem);
     }
   }
-`
-export default Services
+`;
+export default Services;

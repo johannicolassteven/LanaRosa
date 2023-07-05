@@ -12,7 +12,7 @@ const Navbar = () => {
           <button className="nav-toggle" type="button" onClick={openSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="45"
+              width="55"
               fill=""
               className="bi bi-list"
               viewBox="0 0 16 16"
@@ -44,24 +44,24 @@ const NavContainer = styled.nav`
   .nav-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: var(--max-width);
   }
+  
   .nav-header {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     img {
-      width: 175px;
+      margin-right: -25px;
+      width: 180px;
     }
   }
   .nav-toggle {
+    margin-left: -10px;
     background: transparent;
     border: transparent;
     cursor: pointer;
-    svg {
-      font-size: 2rem;
-    }
   }
+
   .nav-links {
     display: none;
   }
