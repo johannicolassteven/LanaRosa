@@ -66,11 +66,12 @@ const SidebarContainer = styled.div`
     font-size: 1.3rem;
     text-transform: capitalize;
     color: black;
-    border-left: solid black 2px;
+    border-left: solid  #ab7a5f 5px;
+    border-bottom: solid  #ab7a5f 1px;
     margin: 1rem;
-    padding-left: 1rem;
+    margin-bottom: 20px;
+    padding: 0.5rem;
     margin-left: -10px;
-    background-image: linear-gradient(to left, #f0bd6b, #f0bd6baf);
   }
 
   .sidebar {

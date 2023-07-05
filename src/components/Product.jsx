@@ -8,8 +8,8 @@ const Product = ({ id, imagen1,imagen2, name, precio }) => {
     <Wrapper>
       <div className="card">
         <div className="img-container">
-          <img src={imagen1} className="card-img-top" alt={name}></img>
-          <img src={imagen2} className="imagen2" alt={name}></img>
+          <img src={imagen1} className="card-img-top img" alt={name}></img>
+          <img src={imagen2} className="img2" alt={name}></img>
         </div>
         <div className="card-body">
           <h5 className="title">{name}</h5>
@@ -31,19 +31,25 @@ const Wrapper = styled.section`
   justify-content: center;
   .card {
     display: flex;
-    background-color:#65c5c89a;;
+    border : none;
     justify-content: center;
+    max-width:24rem;
+    background-color: black;
     img {
-      width: 10rem;
-      margin: 2px;
+      max-width: 12rem;
+      border-radius: 0;
     }
   }
+  .img2{
+        min-width: 140px;
+        object-fit: cover;
+      }
 
   .img-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: -5rem ;
+    margin-bottom: -2rem ;
   }
 
   .title{
@@ -54,15 +60,14 @@ const Wrapper = styled.section`
   }
   .card-body{
     color:black;
-    background-color: #ffffff45;
-    background-image: linear-gradient( transparent, #464646);
-
+    background-color: #ffffff85;
+    background-image: linear-gradient( transparent, #5eb6b932);
 
   }
   .btn-primary{
     display: flex;
     justify-content: center;
-    background-color: #f0bd6baf;
+    background-color: #ab7a5f;
     border-color: black;
     margin:0 100px;
   }
