@@ -28,7 +28,7 @@ const Product = ({ id, imagen1,imagen2, name, precio }) => {
 };
 
 const Wrapper = styled.section`
-  justify-content: center;
+
   .card {
     display: flex;
     border : none;

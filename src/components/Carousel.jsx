@@ -37,9 +37,9 @@ const Carousel = () => {
             />
           </div>
           <div className="carousel-item">
-            <img
-              src="https://i.ibb.co/TYhBkpS/Blanco2.jpg"
-              className="d-block w-100"
+            <img 
+              src="https://i.ibb.co/NFZnHcv/Blanco-Top2.jpg"
+              className="d-block w-100 img2"
               alt="..."
             />
           </div>
@@ -85,7 +85,7 @@ const Carousel = () => {
 };
 
 const Wrapper = styled.section`
-  width: 95%;
+  width: 98%;
   margin: auto;
 
   .slide {
@@ -101,9 +101,13 @@ const Wrapper = styled.section`
     object-position: 0% 80%;
   }
 
+  .img2{
+    object-position: 0% 50%;
+  }
+
   .productos-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items:center;
     min-width: 10rem;
   }
 
@@ -113,6 +117,7 @@ const Wrapper = styled.section`
     background-color: #ab7a5f;
     border-color: black;
     margin: 10px;
+    margin-bottom: -70px;
     border-radius: 10px;
   }a:link{
     text-decoration: none;

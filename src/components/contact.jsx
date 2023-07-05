@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Wrapper>
+      <div className="underline"></div>
       <div className="section-center">
         <h3>Join our newsletter and get 20% off</h3>
         <div className="content">
@@ -27,6 +28,9 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
+
+
+
   .section-center {
     margin: 0 2rem;
   }
@@ -73,6 +77,8 @@ const Wrapper = styled.section`
     color: white;
     border-color: black;
   }
+
+
 
   @media (min-width: 992px) {
     .content {

@@ -25,11 +25,13 @@ const Sidebar = () => {
           </button>
           <img src="https://i.ibb.co/FmR6ddw/LanaRosa.png" alt="logo" />
         </div>
-        <ul className="links" onClick={closeSidebar}>
+
+       <ul className="links" onClick={closeSidebar}>
           <Link to="/">Hogar</Link>
           <Link to="/about">Sobre LanaRosa</Link>
           <Link to="/products">Productos</Link>
         </ul>
+ 
 
         <div className="cart-container">
           <button className="login button">
@@ -37,7 +39,7 @@ const Sidebar = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="45"
               fill="currentColor"
-              class="bi bi-person-add"
+              className="bi bi-person-add"
               viewBox="0 0 16 16"
             >
               <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
@@ -81,7 +83,10 @@ const SidebarContainer = styled.div`
     cursor: pointer;
   }
 
-  .links a {
+
+
+  
+  a {
     display: block;
     text-decoration: none;
     text-align: left;
@@ -94,7 +99,10 @@ const SidebarContainer = styled.div`
     margin-bottom: 20px;
     padding: 0.5rem;
     margin-left: -33px;
+    background-color: rgb(144, 200, 202);
   }
+
+
 
   .sidebar {
     position: fixed;
@@ -102,7 +110,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #5eb6b97c;
+    background: rgba(157, 214, 216, 0.93);
     transition: 0.5s;
     transform: translate(-100%);
     z-index: -1;
@@ -121,13 +129,13 @@ const SidebarContainer = styled.div`
   .button {
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
     width: 5rem;
     height: 4rem;
     margin: 1rem;
     display: flex;
     background-color: #ab7a5f;
-    border-color: transparent;
+    border-radius: 25px;
+    border-color: #000000;
   }
 
   @media screen and (min-width: 992px) {

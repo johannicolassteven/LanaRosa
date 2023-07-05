@@ -10,9 +10,10 @@ import Contact from "../components/contact";
 const Home = () => {
   return <div>
 
-    <Carousel/>
-    <Services/>
+    <Carousel/> 
     <Contact/>
+    <Services/>
+   
   </div>;
 };
 

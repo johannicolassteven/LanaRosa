@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar'
 import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import SingleProduct from './Pages/SingleProductPage'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -19,7 +20,7 @@ function App() {
     <Route path='/products:/id' element={<SingleProduct/>} />
 
     </Routes>
-  
+    <Footer/>
   </Router>
   )
 }
