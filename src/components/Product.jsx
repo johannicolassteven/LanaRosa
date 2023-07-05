@@ -31,7 +31,7 @@ const Wrapper = styled.section`
   justify-content: center;
   .card {
     display: flex;
-    background-color: #ffbba8;
+    background-color:#65c5c89a;;
     justify-content: center;
     img {
       width: 10rem;
@@ -64,6 +64,7 @@ const Wrapper = styled.section`
     justify-content: center;
     background-color: #f0bd6baf;
     border-color: black;
+    margin:0 100px;
   }
   .btn-primary:active{
     background-color: #8d7041ae;

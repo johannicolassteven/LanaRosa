@@ -10,21 +10,20 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <button className="nav-toggle" type="button" onClick={openSidebar}>
-          <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              fill="pink"
-              className="bi bi-justify"
+              width="45"
+              fill=""
+              className="bi bi-list"
               viewBox="0 0 16 16"
+  
             >
               <path
-                fillRule="evenodd"
-                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
               />
             </svg>
-          </button>{" "}
-          
+          </button>{" "}<img src="https://i.ibb.co/FmR6ddw/LanaRosa.png" alt="logo" />
         </div>
         <ul className="nav-links">
           <Link to="/">Hogar</Link>

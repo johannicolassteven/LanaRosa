@@ -15,8 +15,9 @@ const PageHero = ({ title, product }) => {
 }
 
 const Wrapper = styled.section`
-  background:   #f0bd6baf;
+  background:   #65c5c89a;
   width: 100%;
+  min-width: 390px;
   min-height: 20vh;
   display: flex;
   align-items: center;

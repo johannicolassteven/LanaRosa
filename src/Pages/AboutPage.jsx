@@ -29,6 +29,7 @@ const Wrapper = styled.section`
 justify-content: center;
 display: flex;
 flex-direction: column;
+min-width: 390px;
   img {
     width: 100%;
     display: block;

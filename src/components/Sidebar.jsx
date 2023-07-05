@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/products-context";
 import styled from "styled-components";
+import logotipo from "../Utils/LanaRosa.png";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -11,7 +12,7 @@ const Sidebar = () => {
       <aside
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
-        <div className="sidebar-header">
+        <div className="sidebar-header"><img src="https://i.ibb.co/FmR6ddw/LanaRosa.png" alt="logo" />
           <button className="close-btn" type="button" onClick={closeSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +25,7 @@ const Sidebar = () => {
               <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
           </button>
+          
         </div>
         <ul className="links" onClick={closeSidebar}>
           <Link to="/">Hogar</Link>
@@ -38,7 +40,7 @@ const Sidebar = () => {
 const SidebarContainer = styled.div`
   .sidebar-header {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
     img {
@@ -77,7 +79,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffbba8ab;
+    background: #ffffff;
     transition: 0.5s;
     transform: translate(-100%);
     z-index: -1;
