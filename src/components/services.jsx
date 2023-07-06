@@ -44,7 +44,7 @@ const Wrapper = styled.section`
   }
   padding: 5rem 0;
 
-  background: #5eb6b932;
+  background: var(--color-secundario);
 
   .header h3 {
     margin-bottom: 2rem;
@@ -60,7 +60,7 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var( --claro);
+    background: var( --cafe);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 50px;
@@ -71,13 +71,14 @@ const Wrapper = styled.section`
     }
   }
   span {
+
     width: 10rem;
     height: 10rem;
     display: grid;
     margin: 0 auto;
     place-items: center;
     border-radius: 50%;
-    background:#ab755f41;
+    background: var(--claro);
   }
 
   @media (min-width: 992px) {

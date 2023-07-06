@@ -2,15 +2,17 @@ import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-const Product = ({ id, imagen1, name, precio }) => {
+const Product = ({ id, imagen1,imagen2, name, precio }) => {
   return (
     <Wrapper>
       <div className="contenedor">
         <div className="product-card">
-          <div className="product-image">
+          <div className="producto-image">
             <img src={imagen1} className="image" alt={name}></img>
+            <img src={imagen2} className="image2" alt={name}></img>
           </div>
-          <div className="product-details">
+<div className="descripcion">
+<div className="product-details">
             <h5 className="titulo">{name}</h5>
             <Link to={`/products/${id}`} className="price">
               ${precio}
@@ -36,6 +38,7 @@ const Product = ({ id, imagen1, name, precio }) => {
               <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
             </svg>
           </div>
+</div>
         </div>
       </div>
     </Wrapper>
@@ -44,23 +47,42 @@ const Product = ({ id, imagen1, name, precio }) => {
 
 const Wrapper = styled.section`
 
+margin: auto;
   .contenedor {
     display: flex;
-    margin: 5px auto;
-    max-width: 10rem;
-    border: solid 1px #999;
+    margin: 5px auto 5px;
+    max-width: 20rem;
+    
+    justify-content: center;
   }
 
-  .image {
+  img{
     display: flex;
+    margin: auto;
     z-index: -2;
     max-width: 10rem;
+    min-width: 1rem;
+  }
+
+  .image2{
+    display: none;
+  }
+
+  .producto-card{
+    display: flex;
+    justify-content: center;
+    
   }
 
   .product-details {
     display: flex;
     justify-content: space-around;
     height: 1.5rem;
+  }
+
+  .descripcion{
+    background-color: var(--cafe);
+    padding-bottom: 1rem;
   }
 
   .titulo {
@@ -79,7 +101,17 @@ const Wrapper = styled.section`
   .icons{
     display: flex;
     justify-content: space-around;
-    margin: 0 2rem 5px;
+    margin: 0 2rem;
+  }
+
+  @media (min-width: 992px) {
+
+    .image2{
+      display:flex
+    }
+    .producto-image{
+      display: flex;
+    }
   }
 
 `;

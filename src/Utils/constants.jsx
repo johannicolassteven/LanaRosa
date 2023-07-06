@@ -6,7 +6,7 @@ export const services = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100"
-        fill=" #777"
+        fill=" #393939"
         class="bi bi-book"
         viewBox="0 0 16 16"
       >
@@ -23,7 +23,7 @@ export const services = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100"
-        fill="#777"
+        fill="#393939"
         class="bi bi-book"
         viewBox="0 0 16 16"
       >
@@ -39,7 +39,7 @@ export const services = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100"
-        fill="#777"
+        fill="#393939"
         class="bi bi-book"
         viewBox="0 0 16 16"
       >

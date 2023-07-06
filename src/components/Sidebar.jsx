@@ -26,12 +26,12 @@ const Sidebar = () => {
           <img src="https://i.ibb.co/FmR6ddw/LanaRosa.png" alt="logo" />
         </div>
 
-       <ul className="links" onClick={closeSidebar}>
+        <ul className="links" onClick={closeSidebar}>
           <Link to="/">Hogar</Link>
-          <Link to="/about">Sobre LanaRosa</Link>
+
           <Link to="/products">Productos</Link>
+          <Link to="/about">Sobre LanaRosa</Link>
         </ul>
- 
 
         <div className="cart-container">
           <button className="login button">
@@ -83,13 +83,10 @@ const SidebarContainer = styled.div`
     cursor: pointer;
   }
 
-
-
-  
   a {
     display: block;
     text-decoration: none;
- 
+
     font-size: 1.3rem;
     text-transform: capitalize;
     color: #000;
@@ -99,11 +96,8 @@ const SidebarContainer = styled.div`
     margin-bottom: 20px;
     padding: 0.5rem;
     margin-left: -33px;
-
   }
 
-
- 
   .sidebar {
     position: fixed;
     top: 0;

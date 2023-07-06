@@ -27,8 +27,8 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <Link to="/">Hogar</Link>
-          <Link to="/about">Sobre LanaRosa</Link>
           <Link to="/products">Productos</Link>
+          <Link to="/about">Sobre LanaRosa</Link>
         </ul>
 
         <div className="botones">
@@ -93,7 +93,7 @@ const NavContainer = styled.nav`
   .nav-header {
     display: flex;
     align-items: center;
-    
+
     img {
       margin-top: 2px;
       margin-right: -25px;
@@ -114,11 +114,16 @@ const NavContainer = styled.nav`
     display: none;
   }
 
-  .botones{
-    svg{
+  .botones {
+    svg {
       margin: 0 5px;
     }
   }
+
+  a{
+    text-decoration: none;
+  }
+ 
 
   @media (min-width: 992px) {
     .nav-toggle {
@@ -137,13 +142,12 @@ const NavContainer = styled.nav`
         margin: 0 0.5rem;
       }
       a {
-        color: var(--clr-grey-3);
+        color: black;
         font-size: 1rem;
         text-transform: capitalize;
-        letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          border-bottom: 2px solid var(--cafe);
         }
       }
     }

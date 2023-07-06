@@ -39,6 +39,9 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
+    .contenedor{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 `;
 

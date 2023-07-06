@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 
 const Carousel = () => {
   return (
@@ -29,29 +29,37 @@ const Carousel = () => {
             aria-label="Slide 3"
           ></button>
         </div>
+
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img
-              src="https://i.ibb.co/s6gThXB/Negro1.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
+            <Link to="/products">
+              <img
+                src="https://i.ibb.co/s6gThXB/Negro1.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
+            </Link>
           </div>
           <div className="carousel-item">
-            <img 
-              src="https://i.ibb.co/NFZnHcv/Blanco-Top2.jpg"
-              className="d-block w-100 img2"
-              alt="..."
-            />
+            <Link to="/products">
+              <img
+                src="https://i.ibb.co/NFZnHcv/Blanco-Top2.jpg"
+                className="d-block w-100 img2"
+                alt="..."
+              />
+            </Link>
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src="https://i.ibb.co/qdYFSsQ/Rosado1.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
+            <Link to="/products">
+              <img
+                src="https://i.ibb.co/qdYFSsQ/Rosado1.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
+            </Link>
           </div>
         </div>
+
         <button
           className="carousel-control-prev"
           type="button"
@@ -79,7 +87,10 @@ const Carousel = () => {
       </div>
 
       <div className="productos-container">
-       <Link to="/products"> <button className="productos">ver todos los productos</button></Link>
+        <Link to="/products">
+          {" "}
+          <button className="productos">ver todos los productos</button>
+        </Link>
       </div>
     </Wrapper>
   );
@@ -91,48 +102,54 @@ const Wrapper = styled.section`
 
   .slide {
     display: flex;
-    max-width: 70rem;
   }
 
   img {
     display: flex;
     height: 20rem;
-    max-width: 70rem;
     object-fit: cover;
     object-position: 0% 80%;
   }
 
-  .img2{
+  .img2 {
     object-position: 0% 50%;
   }
 
   .productos-container {
     display: grid;
-    place-items:center;
+    place-items: center;
     min-width: 10rem;
   }
 
   .productos {
     display: flex;
     padding: 5px 100px;
-    background-color: #ab7a5f;
+    background-color: var(--cafe);
     border-color: black;
     margin: 10px;
     border-radius: 10px;
-  }a:link{
+  }
+  a:link {
     text-decoration: none;
   }
-  
-  .productos:active{
+
+  .productos:active {
     background-color: #e4a07b;
   }
 
-  @media (min-width: 992px) {
-    margin: 0;
+  @media (min-width: 530px) {
+    width: 70%;
     img {
-      display: flex;
-      height: 30rem;
-      object-fit: scale-down;
+      object-position: 0% 60%;
+      min-height: 30rem;
+    }
+  }
+
+  @media (min-width: 920px) {
+    width: 70%;
+    img {
+      object-position: 0% 60%;
+      min-height: 40rem;
     }
   }
 `;
