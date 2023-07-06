@@ -1,0 +1,11 @@
+:root {
+    --color-principal : rgb(255, 179, 186);
+    --color-secundario : rgba(250, 221, 221, 0.625);
+    --color-terciario :rgb(255, 128, 171);
+    --color-botones : rgb(204, 0, 102);
+    --azul : #5eb6b932;
+    --azul2 : rgb(237, 249, 253);
+    --cafe : rgb(208, 155, 112);
+    --cafe2 : rgb(128, 94, 61);
+    --claro : rgba(255, 240, 230, 0.627);
+}

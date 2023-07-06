@@ -51,9 +51,11 @@ const Wrapper = styled.section`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  min-width: 390px;
+
   padding: 1rem 1.5rem;
+
   img {
+    max-width: 10rem;
     width: 100%;
     display: block;
     border-radius: 15px;

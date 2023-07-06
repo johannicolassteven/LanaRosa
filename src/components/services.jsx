@@ -60,14 +60,13 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-  
-    background: #ab755f99;
+    background: var( --claro);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 50px;
     p {
       margin-top: -2rem;
-      display: flex;
+
       color: black;
     }
   }

@@ -6,6 +6,8 @@ import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import SingleProduct from './Pages/SingleProductPage'
 import Footer from './components/Footer'
+import "./style.css"
+
 
 function App() {
   

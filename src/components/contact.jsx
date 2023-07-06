@@ -56,7 +56,7 @@ const Wrapper = styled.section`
     border: 2px solid blue;
   }
   .form-input {
-
+    padding-left: 10px;
     border-right: none;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -71,10 +71,10 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
   .submit-btn {
-    background: #387172;
+    background: var(--cafe);
     text-transform: capitalize;
     cursor: pointer;
-    color: white;
+    color: black;
     border-color: black;
   }
 

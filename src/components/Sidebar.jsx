@@ -37,7 +37,7 @@ const Sidebar = () => {
           <button className="login button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="45"
+              width="25"
               fill="currentColor"
               className="bi bi-person-add"
               viewBox="0 0 16 16"
@@ -49,7 +49,7 @@ const Sidebar = () => {
           <button className="cart button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="45"
+              width="25"
               fill="currentColor"
               className="bi bi-cart"
               viewBox="0 0 16 16"
@@ -67,13 +67,13 @@ const SidebarContainer = styled.div`
   .sidebar-header {
     height: 5rem;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: #ffffff;
     img {
       margin-right: -25px;
-      width: 180px;
+      width: 100px;
     }
   }
   .close-btn {
@@ -89,28 +89,28 @@ const SidebarContainer = styled.div`
   a {
     display: block;
     text-decoration: none;
-    text-align: left;
+ 
     font-size: 1.3rem;
     text-transform: capitalize;
     color: #000;
-    border-left: solid #ab7a5f 5px;
-    border-bottom: solid #ab7a5f 1px;
+    border-left: solid #999 5px;
+    border-bottom: solid #999 1px;
     margin: 1rem;
     margin-bottom: 20px;
     padding: 0.5rem;
     margin-left: -33px;
-    background-color: rgb(144, 200, 202);
+
   }
 
 
-
+ 
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 85%;
     height: 100%;
-    background: rgba(157, 214, 216, 0.93);
+    background: var(--azul2);
     transition: 0.5s;
     transform: translate(-100%);
     z-index: -1;
@@ -129,13 +129,12 @@ const SidebarContainer = styled.div`
   .button {
     align-items: center;
     justify-content: center;
-    width: 5rem;
-    height: 4rem;
-    margin: 1rem;
+    width: 4rem;
+    height: 3rem;
+    margin: 0 1rem;
     display: flex;
-    background-color: #ab7a5f;
+    background-color: var(--color-secundario);
     border-radius: 25px;
-    border-color: #000000;
   }
 
   @media screen and (min-width: 992px) {

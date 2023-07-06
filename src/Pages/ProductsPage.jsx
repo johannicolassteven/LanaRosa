@@ -7,38 +7,35 @@ import PageHero from "../components/Hero";
 const ProductsPage = () => {
   return (
     <>
-    <PageHero title="Productos"></PageHero>
-    <Wrapper>
-      <div className="container">
-        <ul>
+      <PageHero title="Productos"></PageHero>
+      <Wrapper>
+        <div className="contenedor">
           {tops.map((top, index) => {
             return (
-              <li  key={top.id}>
+              <div key={top.id}>
                 <Product
                   imagen1={top.imagen1}
                   imagen2={top.imagen2}
                   name={top.name}
                   precio={top.precio}
                 />
-              </li>
+              </div>
             );
           })}
-        </ul>
-      </div>
-    </Wrapper></>
+        </div>
+      </Wrapper>
+    </>
   );
 };
 
 const Wrapper = styled.section`
-min-width: 390px;
-  .container {
-    ul {
-      list-style: none;
-      margin-left: -30px;
-    }
-    li {
-      margin: 1rem;
-    }
+
+ 
+  margin: 2rem 0 2rem;
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: 992px) {

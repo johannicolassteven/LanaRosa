@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Carousel = () => {
   return (
@@ -117,7 +118,6 @@ const Wrapper = styled.section`
     background-color: #ab7a5f;
     border-color: black;
     margin: 10px;
-    margin-bottom: -70px;
     border-radius: 10px;
   }a:link{
     text-decoration: none;
