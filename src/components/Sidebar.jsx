@@ -78,15 +78,15 @@ const SidebarContainer = styled.div`
   .cerrar {
     position: fixed;
     top: 0;
-    width: 150%;
+    width: 100%;
     height: 100%;
     background: #00000044;
-    transition: 0.5s;
-    transform: translate(-190%);
+    transition: 0s;
+    transform: translate(-100%);
     z-index: -1;
   }
 
-  .show-cerrar{
+  .show-cerrar {
     transition: 0s;
     transform: translate(0);
     z-index: 2;
@@ -133,7 +133,7 @@ const SidebarContainer = styled.div`
     height: 100%;
     background: var(--azul2);
     transition: 0.2s;
-    transform: translate(-100%);
+    transform: translate(-150%);
     z-index: -1;
   }
   .show-sidebar {
