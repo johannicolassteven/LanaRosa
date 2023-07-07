@@ -138,7 +138,7 @@ const SidebarContainer = styled.div`
   }
   .show-sidebar {
     transform: translate(0);
-    z-index: 4;
+    z-index: 999;
     transition: 0.5s;
   }
 
