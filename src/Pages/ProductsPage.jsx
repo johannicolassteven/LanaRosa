@@ -9,8 +9,8 @@ const ProductsPage = () => {
     <>
       <PageHero title="Productos"></PageHero>
       <Wrapper>
-        <div className="contenedor">
-          {tops.map((top, index) => {
+        <div className="contenedor2">
+          {tops.map((top) => {
             return (
               <div key={top.id}>
                 <Product
@@ -31,9 +31,9 @@ const ProductsPage = () => {
 const Wrapper = styled.section`
 
  
-  margin: 2rem 0 2rem;
+  margin: 1rem;
 
-  .contenedor {
+  .contenedor2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

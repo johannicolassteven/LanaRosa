@@ -27,14 +27,13 @@ const Sidebar = () => {
         </div>
 
         <ul className="links" onClick={closeSidebar}>
-          <Link to="/">Hogar</Link>
-
-          <Link to="/products">Productos</Link>
-          <Link to="/about">Sobre LanaRosa</Link>
+          <Link className="a" to="/">Hogar</Link>
+          <Link className="a" to="/products">Productos</Link>
+          <Link className="a" to="/about">Sobre LanaRosa</Link>
         </ul>
 
         <div className="cart-container">
-          <button className="login button">
+          <button className="login button" onClick={closeSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -46,7 +45,8 @@ const Sidebar = () => {
               <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
             </svg>
           </button>
-          <button className="cart button">
+          <Link to="/cart">
+          <button className="cart button" onClick={closeSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -56,7 +56,7 @@ const Sidebar = () => {
             >
               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
             </svg>
-          </button>
+          </button></Link>
         </div>
       </aside>
     </SidebarContainer>
@@ -83,10 +83,9 @@ const SidebarContainer = styled.div`
     cursor: pointer;
   }
 
-  a {
+  .a{
     display: block;
     text-decoration: none;
-
     font-size: 1.3rem;
     text-transform: capitalize;
     color: #000;
@@ -97,6 +96,8 @@ const SidebarContainer = styled.div`
     padding: 0.5rem;
     margin-left: -33px;
   }
+
+  
 
   .sidebar {
     position: fixed;
