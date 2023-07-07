@@ -80,7 +80,7 @@ const Wrapper = styled.section`
 
   .descripcion {
     background-color: var(--cafe);
-    padding-bottom: 1rem;
+    padding-bottom: 5px;
   }
 
   .titulo {

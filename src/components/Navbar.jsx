@@ -35,7 +35,6 @@ const Navbar = () => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
-            fill="black"
             className="bi bi-person-add"
             viewBox="0 0 16 16"
           >
@@ -43,8 +42,7 @@ const Navbar = () => {
             <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
           </svg>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
+            xmlns="http://www.w3.org/2000/svg"   
             fill="black"
             className="bi bi-search"
             viewBox="0 0 16 16"
@@ -53,7 +51,6 @@ const Navbar = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
             fill="black"
             className="bi bi-heart"
             viewBox="0 0 16 16"
@@ -64,7 +61,6 @@ const Navbar = () => {
           <Link to="/cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
             fill="black"
             className="bi bi-cart"
             viewBox="0 0 16 16"
@@ -95,11 +91,12 @@ const NavContainer = styled.nav`
   .nav-header {
     display: flex;
     align-items: center;
-
     img {
-      margin-top: 2px;
       margin-right: -25px;
       width: 100px;
+    }
+    svg{
+      margin-bottom: .1rem;
     }
   }
   .nav-toggle {
@@ -117,11 +114,11 @@ const NavContainer = styled.nav`
   }
 
   .botones {
-    svg {
-      margin: 0 5px;
-    }
+   svg {
+      width: 1.3rem;
+      margin: 0 10px .3rem;
+  } 
   }
-
   a{
     text-decoration: none;
   }

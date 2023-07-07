@@ -10,7 +10,6 @@ import "./style.css"
 import CartPage from './Pages/CartPage'
 
 function App() {
-
   return (
     <Router>
     <Navbar/>
