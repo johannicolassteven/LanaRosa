@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { redes } from "../Utils/constants";
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <Container>
@@ -8,12 +11,19 @@ const Footer = () => {
         <span> LanaRosa</span>
       </h5>
       <h5>All rights reserved</h5>
+      <div className="redes">
+      {redes.map((red) => {
+        const {rute, icon, id} = red;
+       return  <Link className="red" target='_blank' key={id} to={rute}>{icon}</Link>
+      })
+      }
+      </div>
     </Container>
   )
 }
 
 const Container = styled.footer`
-  height: 5rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +41,18 @@ const Container = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
+  .redes{
+    margin: 1rem;
+  }
+
+  .red{
+    width:1rem;
+    margin: 1rem;
+    color: white;
+  }
+
+
+
   @media (min-width: 776px) {
     flex-direction: row;
   }

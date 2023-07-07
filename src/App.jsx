@@ -8,12 +8,14 @@ import SingleProduct from './Pages/SingleProductPage'
 import Footer from './components/Footer'
 import "./style.css"
 import CartPage from './Pages/CartPage'
+import Chat from './components/Chat'
 
 function App() {
   return (
-    <Router>
+    <Router> 
+      
     <Navbar/>
-    <Sidebar/>
+    <Sidebar/>  <Chat/>
     <Routes >
     <Route path='/' element={<HomePage/>} />
     <Route path='/about' element={<AboutPage/>} />
@@ -21,6 +23,7 @@ function App() {
     <Route path='/products:/id' element={<SingleProduct/>} />
     <Route path='/cart' element={<CartPage/>} />
     </Routes>
+ 
     <Footer/>
   </Router>
   )
