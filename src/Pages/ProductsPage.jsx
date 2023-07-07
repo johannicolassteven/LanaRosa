@@ -3,11 +3,13 @@ import Product from "../components/Product";
 import { styled } from "styled-components";
 import { tops } from "../../db";
 import PageHero from "../components/Hero";
+import Filtros from "../components/Filters";
 
 const ProductsPage = () => {
   return (
     <>
       <PageHero title="Productos"></PageHero>
+      <Filtros/>
       <Wrapper>
         <div className="contenedor2">
           {tops.map((top) => {
@@ -29,18 +31,15 @@ const ProductsPage = () => {
 };
 
 const Wrapper = styled.section`
-
  
-  margin: 1rem;
-
   .contenedor2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (min-width: 992px) {
-    .contenedor{
-      grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: 530px) {
+    .contenedor2{
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 `;

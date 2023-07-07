@@ -36,9 +36,12 @@ const Sidebar = () => {
           <Link className="a" to="/about">
             Sobre LanaRosa
           </Link>
+          <Link className="a" to="/servicioAlCliente">
+            Servicio al cliente
+          </Link>
         </ul>
 
-        <div className="cart-container">
+        <div className="main-buttons">
           <button className="login button" onClick={closeSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,11 +117,11 @@ const SidebarContainer = styled.div`
   .a {
     display: block;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: capitalize;
     color: #000;
-    border-left: solid #999 5px;
-    border-bottom: solid #999 1px;
+    border-left: solid var(--azul2) 5px;
+    border-bottom: solid var(--azul2) 1px;
     margin: 1rem;
     margin-bottom: 20px;
     padding: 0.5rem;
@@ -131,10 +134,11 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 85%;
     height: 100%;
-    background: var(--azul2);
+    background: var(--azul);
     transition: 0.2s;
     transform: translate(-150%);
     z-index: -1;
+
   }
   .show-sidebar {
     transform: translate(0);
@@ -142,21 +146,16 @@ const SidebarContainer = styled.div`
     transition: 0.5s;
   }
 
-  .cart-container {
+  .main-buttons {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
   }
 
   .button {
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 3rem;
-    margin: 0 1rem;
-    display: flex;
-    background-color: var(--color-secundario);
-    border-radius: 25px;
+    margin: 10% 10px 0;
+    background-color: transparent;
+    border: none;
   }
 
   @media screen and (min-width: 992px) {

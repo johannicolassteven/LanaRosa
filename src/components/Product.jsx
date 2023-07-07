@@ -55,11 +55,15 @@ const Wrapper = styled.section`
     justify-content: center;
   }
 
+  .filtros{
+    background-color: blue;
+  }
+
   img {
     display: flex;
     margin: auto;
     z-index: -2;
-    max-width: 10rem;
+    max-width: 11.5rem;
     min-width: 1rem;
   }
 
@@ -79,7 +83,7 @@ const Wrapper = styled.section`
   }
 
   .descripcion {
-    background-color: var(--cafe);
+    background-color: var(--azul2);
     padding-bottom: 5px;
   }
 

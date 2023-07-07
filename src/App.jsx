@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import "./style.css"
 import CartPage from './Pages/CartPage'
 import Chat from './components/Chat'
+import ServicioCliente from './Pages/ServicioClientePage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path='/products' element={<ProductsPage/>} />
     <Route path='/products:/id' element={<SingleProduct/>} />
     <Route path='/cart' element={<CartPage/>} />
+    <Route path='/servicioAlCliente' element={<ServicioCliente/>} />
     </Routes>
  
     <Footer/>

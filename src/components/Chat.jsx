@@ -33,6 +33,7 @@ const Wrapper = styled.section`
     border: none;
     border-radius: 150px 150px 0px 150px;
     cursor: pointer;
+    z-index: 999;
   }
 `;
 
