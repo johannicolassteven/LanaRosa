@@ -52,66 +52,69 @@ const GridView = ({ tops }) => {
 };
 
 const Wrapper = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-
-  img {
+  .grid{
     display: flex;
-    margin: auto;
-    z-index: -2;
-    max-width: 10.5rem;
-    min-width: 1rem;
-  }
-
-  .image2 {
-    display: none;
-  }
-
-  .descripcion {
-    background-color: var(--azul2);
-    padding-bottom: 5px;
-  }
-
-  .product-details {
-    display: flex;
-    justify-content: space-around;
-    height: 1.5rem;
-  }
-
-
-
-  .titulo {
-    font-size: 0.8rem;
-  }
-
-  .price {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: black;
-    p {
-      font-size: 0.5rem;
+    margin: 1rem;
     }
-  }
 
-  .icons {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 2rem;
-  }
-
-  @media (min-width: 992px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-
-    .image2 {
+    .product-card{
       display: flex;
     }
-    .producto-image {
-      display: flex;
+  
+  
+   .producto-image{
+    display: flex;
+   }
+  
+    img {
+    width: 7.5rem;
     }
-  }
-`;
+  
+    .descripcion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      background-color: var(--azul2);
+      padding-bottom: 5px;
+
+    }
+
+    .product-details {
+     margin: 0 auto;
+    }
+
+    .titulo {
+      font-size: 0.8rem;
+    }
+  
+    .price {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: black;
+      p {
+        font-size: 0.5rem;
+      }
+    }
+  
+    .icons {
+      margin: 0 auto;
+      svg{
+        margin: 5px;
+      }
+    }
+  
+    @media (min-width: 992px) {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      img{
+        max-width: 12rem;
+      }
+    }
+  `;
 
 export default GridView;
