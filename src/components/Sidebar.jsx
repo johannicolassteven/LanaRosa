@@ -83,7 +83,7 @@ const SidebarContainer = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    background: #00000044;
+    background: #00000083;
     transition: 0s;
     transform: translate(-100%);
     z-index: -1;
@@ -132,7 +132,7 @@ const SidebarContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 85%;
+    width: 80%;
     height: 100%;
     background: var(--azul);
     transition: 0.2s;
@@ -162,6 +162,8 @@ const SidebarContainer = styled.div`
     .sidebar {
       display: none;
     }
+    .cerrar{display:none;}
+    
   }
 `;
 
