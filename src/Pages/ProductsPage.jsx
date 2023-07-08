@@ -9,7 +9,7 @@ const ProductsPage = () => {
       <PageHero title="Productos"></PageHero>
       <div>
       <Filtros/>
-      <ProductsList></ProductsList>
+      <ProductsList/>
       </div>
     </>
   );

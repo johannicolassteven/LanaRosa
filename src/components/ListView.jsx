@@ -2,10 +2,16 @@ import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-const ListView = ({ id, imagen1, imagen2, name, precio }) => {
+const ListView = ({ tops }) => {
+
+
+
   return (
-    <Wrapper>
-      <div className="contenedor">
+    <WrapperList>
+      {tops.map((top)=>{
+        const {id, imagen1, imagen2, name, precio} = top
+
+      return <div className="list" key={id}>
         <div className="product-card">
           <div className="producto-image">
             <img src={imagen1} className="image" alt={name}></img>
@@ -40,81 +46,77 @@ const ListView = ({ id, imagen1, imagen2, name, precio }) => {
             </div>
           </div>
         </div>
-      </div>
-    </Wrapper>
+      </div>})}
+      
+    </WrapperList>
   );
 };
 
-const Wrapper = styled.section`
-  display: flex;
+const WrapperList = styled.section`
     
-  .contenedor {
+    .list {
     display: flex;
-    margin: 5px auto 5px;
-    
-    justify-content: center;
-  }
-
-
- .producto-image{
-  display: flex;
- }
-
-  img {
-    display: flex;
-    margin: auto;
-    z-index: -2;
-    max-width: 8rem;
-    min-width: 1rem;
-  }
-
-  .image2 {
-    display: flex;
-  }
-
-  .producto-card {
-    display: flex;
-    justify-content: center;
-  }
-
-  .product-details {
-    display: flex;
-    justify-content: space-around;
-    height: 1.5rem;
-  }
-
-  .descripcion {
-    background-color: var(--azul2);
-    padding-bottom: 5px;
-  }
-
-  .titulo {
-    font-size: 0.8rem;
-  }
-
-  .price {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: black;
-    p {
-      font-size: 0.5rem;
+    margin: 1rem;
     }
-  }
 
-  .icons {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 2rem;
-  }
-
-  @media (min-width: 992px) {
-    .image2 {
+    .product-card{
       display: flex;
     }
-    .producto-image {
-      display: flex;
+  
+  
+   .producto-image{
+    display: flex;
+   }
+  
+    img {
+    width: 7.5rem;
     }
-  }
-`;
+  
+    .descripcion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      background-color: var(--azul2);
+      padding-bottom: 5px;
+
+    }
+
+    .product-details {
+     margin: 0 auto;
+    }
+
+    .titulo {
+      font-size: 0.8rem;
+    }
+  
+    .price {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: black;
+      p {
+        font-size: 0.5rem;
+      }
+    }
+  
+    .icons {
+      margin: 0 auto;
+      svg{
+        margin: 5px;
+      }
+    }
+  
+    @media (min-width: 992px) {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      img{
+        max-width: 12rem;
+      }
+    }
+  `;
 
 export default ListView;

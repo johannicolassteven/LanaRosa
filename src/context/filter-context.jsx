@@ -1,12 +1,10 @@
 import React, { useEffect, useContext, useReducer } from "react";
 import reducer from "./filter-reducer";
 import { SET_GRIDVIEW, SET_LISTVIEW ,  } from "../Utils/actions";
-import { tops } from "../../db";
-
 
 const initialState = {
   filtered_products: [], 
-  products : tops,
+  load : null,
   grid_view: true,
  
 }

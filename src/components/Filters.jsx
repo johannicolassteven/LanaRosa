@@ -56,11 +56,6 @@ const Filtros = () => {
 
    
   );
-  if (grid_view === true) {
-    return <h1>vistaaaaaaaaaaaaaaa</h1>
-    //return <ListView products={products} />
-  }
-  return <h1>grilla</h1>
 };
 
 const Wrapper = styled.section`
@@ -76,9 +71,6 @@ const Wrapper = styled.section`
     h1 { margin-top: 5px;
       font-size: 1rem;
     }
-    svg{
-
-    }
   }
 
   hr {
@@ -88,9 +80,15 @@ const Wrapper = styled.section`
     border: solid black 1px;
     margin: 1rem;
   }
+  .filtros{
+    svg{
+      margin:0  5px;
+    }
+  }
 
   .active {
-      background: red;
+    
+      background: var(--azul);
     }
 
   @media (min-width: 992px){
