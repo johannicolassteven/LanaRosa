@@ -55,10 +55,10 @@ const ListView = ({ tops }) => {
 const WrapperList = styled.section`
    display: grid;
   grid-template-columns: 1fr;
-
+margin-top: 2rem;
 
    .list{
-    margin: 1rem 0;
+    margin: .2rem 0;
    }
 
   img {
@@ -102,7 +102,7 @@ const WrapperList = styled.section`
   .icons {
     display: flex;
     justify-content: space-around;
-    margin: 0 2rem;
+    margin: 0 2rem .2rem;
   }
 
   @media (min-width: 992px) {
