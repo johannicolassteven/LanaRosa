@@ -6,7 +6,7 @@ import { styled } from "styled-components";
 import ListView from "./ListView";
 
 const ProductsList = () => {
-  const { filtered_products: load, grid_view } = useFilterContext();
+  const { grid_view } = useFilterContext();
 
   if (grid_view === true) {
     return (

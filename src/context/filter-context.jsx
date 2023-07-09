@@ -1,12 +1,9 @@
-import React, { useEffect, useContext, useReducer } from "react";
+import React, { useContext, useReducer } from "react";
 import reducer from "./filter-reducer";
 import { SET_GRIDVIEW, SET_LISTVIEW ,  } from "../Utils/actions";
 
 const initialState = {
-  filtered_products: [], 
-  load : null,
   grid_view: true,
- 
 }
 
 const FilterContext = React.createContext()

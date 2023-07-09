@@ -55,7 +55,7 @@ const ListView = ({ tops }) => {
 const WrapperList = styled.section`
    display: grid;
   grid-template-columns: 1fr;
-margin-top: 2rem;
+margin: 2rem 0 ;
 
    .list{
     margin: .2rem 0;
