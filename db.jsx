@@ -2,7 +2,7 @@ export const tops = [
     {
       "id": 1,
       "name": "Delicate",
-      "Color": "Negro",
+      "color": "Negro",
       "precio": "55.000",
       "imagen1": "https://i.ibb.co/s6gThXB/Negro1.jpg",
       "imagen2": "https://i.ibb.co/1RkTfhj/Negro2.jpg"
@@ -11,7 +11,7 @@ export const tops = [
     {
       "id": 2,
       "name": "August",
-      "Color": "Blanco",
+      "color": "Blanco",
       "precio": "55.000",
       "imagen1": "https://i.ibb.co/zZHLqwF/Blanco1.jpg",
       "imagen2": "https://i.ibb.co/TYhBkpS/Blanco2.jpg"
@@ -19,7 +19,7 @@ export const tops = [
     {
       "id": 3,
       "name": "Day Light",
-      "Color": "Rosado",
+      "color": "Rosado",
       "precio": "55.000",
       "imagen1": "https://i.ibb.co/qdYFSsQ/Rosado1.jpg",
       "imagen2": "https://i.ibb.co/6F8T2Y1/Rosado2.jpg"
@@ -28,7 +28,7 @@ export const tops = [
     {
       "id": 4,
       "name": "Cruel Summer",
-      "Color": "Fuccia",
+      "color": "Fuccia",
       "precio": "55.000",
       "imagen1": "https://i.ibb.co/WD8kWXm/Morado1.jpg",
       "imagen2": "https://i.ibb.co/9r4wMZm/Morado2.jpg"
@@ -36,7 +36,7 @@ export const tops = [
     {
       "id": 5,
       "name": "Our Song",
-      "Color": "Negro",
+      "color": "Negro",
       "precio": "60.000",
       "imagen1": "https://i.ibb.co/fF9f7dL/Verde1.jpg",
       "imagen2": "https://i.ibb.co/w6V2FDM/Verde2.jpg"
@@ -45,7 +45,7 @@ export const tops = [
     {
       "id": 6,
       "name": "Stay Beautifull",
-      "Color": "Azul Claro",
+      "color": "Azul Claro",
       "precio": "50.000",
       "imagen1": "https://i.ibb.co/vc99SQY/Blanco11.jpg",
       "imagen2": "https://i.ibb.co/NFZnHcv/Blanco-Top2.jpg"
