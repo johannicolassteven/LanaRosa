@@ -16,14 +16,15 @@ const GridView = ({ tops }) => {
                 <img src={imagen2} className="image2" alt={name}></img>
               </div>
               <div className="descripcion">
-                <div className="product-details">
-                  <h5 className="titulo">{name}</h5>
-                  <Link to={`/products/${id}`} className="price">
-                    ${precio}
-                  </Link>
-                </div>
+                <Link to={`/products/${id}`} className="product-details">
+          
+                    <h5 className="titulo">{name}</h5>
+                    <p className="price">${precio}</p>
+           
+                </Link>
                 <div className="icons">
-                  <svg
+                <Link to={`/products/${id}`}>
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
                     fill="currentColor"
@@ -32,6 +33,7 @@ const GridView = ({ tops }) => {
                   >
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                   </svg>
+                </Link>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -52,69 +54,66 @@ const GridView = ({ tops }) => {
 };
 
 const Wrapper = styled.section`
-  .grid{
+  .grid {
     display: flex;
     margin: 1rem;
-    }
+  }
 
-    .product-card{
-      display: flex;
-    }
-  
-  
-   .producto-image{
+  .product-card {
     display: flex;
-   }
-  
-    img {
+  }
+
+  .producto-image {
+    display: flex;
+  }
+
+  img {
     width: 7.5rem;
-    }
-  
-    .descripcion {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-      background-color: var(--azul2);
-      padding-bottom: 5px;
+  }
 
-    }
+  .descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--azul2);
+    padding-bottom: 5px;
+  }
 
-    .product-details {
-     margin: 0 auto;
-    }
+  .product-details {
+    margin: 0 auto;
+  }
 
-    .titulo {
-      font-size: 0.8rem;
-    }
-  
-    .price {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 0.8rem;
-      color: black;
-      p {
-        font-size: 0.5rem;
-      }
-    }
-  
-    .icons {
-      margin: 0 auto;
-      svg{
-        margin: 5px;
-      }
-    }
-  
-    @media (min-width: 992px) {
+  .titulo {
+    font-size: 0.8rem;
+  }
 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      img{
-        max-width: 12rem;
-      }
+  .price {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+    p {
+      font-size: 0.5rem;
     }
-  `;
+  }
+
+  .icons {
+    margin: 0 auto;
+    svg {
+      margin: 5px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      max-width: 12rem;
+    }
+  }
+`;
 
 export default GridView;
