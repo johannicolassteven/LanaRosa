@@ -79,11 +79,12 @@ a:link, a:visited, a:active {
 
   .descripcion {
     min-width: 5rem;
+    max-width: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
-    background-color: var(--azul2);
+    background-color: var(--azul);
     padding-bottom: 5px;
     text-align: center;
   }

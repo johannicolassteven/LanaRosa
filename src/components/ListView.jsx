@@ -58,6 +58,10 @@ const WrapperList = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   margin: 2rem 0;
+  a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #2e2e2e;
+}
 
   .list {
     margin: 0.2rem 0;
