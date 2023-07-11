@@ -4,27 +4,37 @@ import { Link } from "react-router-dom";
 const PageHero = ({ title, product }) => {
   return (
     <Wrapper>
-      <div className="section-center">
+    <div className="hero">
         <h3>
           <Link to="/">Home</Link>
-          {product && <Link to="/products">/ Products</Link>}
-          / {title}
+          {product && <Link to="/products">/ Products</Link>}/ {title}
         </h3>
-      </div>
+    </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  background: var(--color-secundario);
+
+ min-height: 4rem;
+
+.hero{
+  background: aliceblue;
   width: 100%;
-  min-height: 6rem;
+  min-height: 4rem;
   display: flex;
   align-items: center;
   justify-content: estart;
   font-weight: bold;
   text-decoration: none;
   color: #544226;
+  position: fixed;
+}
+
+  h3{
+    font-size: 1rem;
+  }
+
   a {
     color: #2c2c2c;
     padding: 0.5rem;
@@ -33,6 +43,13 @@ const Wrapper = styled.section`
   }
   a:hover {
     color: #a4a4a4;
+  }
+
+  @media (min-width: 992px) {
+    .hero{
+      min-height: 6rem;
+      position:static;
+    }
   }
 `;
 

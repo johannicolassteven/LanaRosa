@@ -18,6 +18,7 @@ const SingleProduct = () => {
               <PageHero title={name} product></PageHero>
               
               <div className="contenedor">
+                <div className="carta">
                 <div className="product-card">
                   <div className="producto-image">
                     <Link to={main}>
@@ -44,7 +45,6 @@ const SingleProduct = () => {
                 </div>
                 <div className="descripcion">
                   <h5 className="titulo">Top {name}</h5>
-                  <p className="price">${precio}</p>
                   <div className="icons">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -56,11 +56,11 @@ const SingleProduct = () => {
                       <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
                     </svg>
                   </div>
-                </div>
+                  </div></div>
               </div>
               <div className="contenedor-cart">
               <button className="cart">
-                agregar a carrito
+                {precio}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -87,11 +87,17 @@ const Wrapper = styled.section`
     flex-direction: column;  
   }
 
+  .carta{
+    margin: 1rem auto 0;
+    background-color: black;
+    margin-bottom: 1rem;
+  }
+
   .product-card {
     display: flex;
     justify-content: center;
-    margin: 1rem auto 0;
-    background-color: black;
+    
+   
   }
 
   .main {
@@ -126,16 +132,9 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 5px auto;
-    width: 25rem;
-  
-    .icons {
-      display: flex;
-      flex-direction: column;
-      svg {
-        margin: 1rem 0;
-      }
-    }
+    padding: 1rem 0;
+    margin: 0 1px 1px;
+    gap:20px;
   }
 
   .cart {
@@ -144,8 +143,9 @@ const Wrapper = styled.section`
     width: 25rem;
     justify-content: center;
     gap: 10px;
-    position: sticky;
-  
+    background-color: aliceblue;
+    border-radius: 5px;
+    border:solid var(--cafe) 1px;
   }
 
   .contenedor-cart{

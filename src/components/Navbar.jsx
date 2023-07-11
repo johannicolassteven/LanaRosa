@@ -78,12 +78,12 @@ const Navbar = () => {
 };
 
 const NavContainer = styled.nav`
-  height: 5rem;
+  height: 4rem;
 
 
 
   .nav {
-    height: 5rem;
+    height: 4rem;
     background-color: white;
     position: fixed;
     z-index: 3;
@@ -130,6 +130,13 @@ width: 100%;
   }
 
   @media (min-width: 992px) {
+
+    height: 5rem;
+
+
+
+.nav {
+  height: 5rem;}
     .nav-toggle {
       display: none;
     }
