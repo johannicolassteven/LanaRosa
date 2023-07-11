@@ -3,13 +3,23 @@ import { useParams, Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { tops } from "../../db";
 import PageHero from "../components/Hero";
+import { useCartContext } from "../context/cart-context";
 
 const SingleProduct = () => {
+  const {addToCart, cart, removeFromCart} = useCartContext();
+
+{console.log(cart)}
+
+const checkProductInCart = product => {
+  return cart.some(item => item.id === product.id)
+}
+
   const { ide } = useParams();
   var parametro = parseInt(ide);
   return (
     <Wrapper>
       {tops.map((top) => {
+        const isProductInCart = checkProductInCart(top)
         var { id, name, imagen1, imagen2, imagen3, precio, color } = top;
         const [main, setMain] = useState(imagen1);
         if (id === parametro) {
@@ -59,7 +69,7 @@ const SingleProduct = () => {
                   </div></div>
               </div>
               <div className="contenedor-cart">
-              <button className="cart">
+              <button className="cart" onClick={() => addToCart(top)}>
                 {precio}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,6 +80,10 @@ const SingleProduct = () => {
                 >
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                 </svg>
+              </button>
+              <button className={`${isProductInCart ? "eliminar" : "none"}`}
+              onClick={() => removeFromCart(tops)}>
+                Eliminar
               </button>
               </div>
              
@@ -85,6 +99,10 @@ const Wrapper = styled.section`
   .contenedor {
     display: flex;
     flex-direction: column;  
+  }
+
+  .none{
+    display: none;
   }
 
   .carta{
