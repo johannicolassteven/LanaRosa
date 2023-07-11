@@ -55,6 +55,11 @@ const GridView = ({ tops }) => {
 };
 
 const Wrapper = styled.section`
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #2e2e2e;
+}
   .grid {
     display: flex;
     margin: 1rem;
@@ -73,12 +78,14 @@ const Wrapper = styled.section`
   }
 
   .descripcion {
+    min-width: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
     background-color: var(--azul2);
     padding-bottom: 5px;
+    text-align: center;
   }
 
   .product-details {
