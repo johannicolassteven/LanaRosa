@@ -96,9 +96,8 @@ const SidebarContainer = styled.div`
   }
 
   .sidebar-header {
-    height: 5rem;
+    height: 4rem;
     display: flex;
-
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: #ffffff;
@@ -108,7 +107,7 @@ const SidebarContainer = styled.div`
     }
   }
   .close-btn {
-    margin-left: -10px;
+    margin-left: -1rem;
     background: transparent;
     border: transparent;
     cursor: pointer;

@@ -140,7 +140,7 @@ const Wrapper = styled.section`
   .cart {
     display: flex;
     margin: 1rem auto;
-    width: 25rem;
+    width: 18rem;
     justify-content: center;
     gap: 10px;
     background-color: aliceblue;
@@ -153,7 +153,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     bottom: 0;
-    height: 100px;
+    height: 50px;
     background-color: var(--azul);
 
   }

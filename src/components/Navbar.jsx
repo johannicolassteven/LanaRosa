@@ -87,8 +87,8 @@ const NavContainer = styled.nav`
     background-color: white;
     position: fixed;
     z-index: 3;
-    width: 90vw;
-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
