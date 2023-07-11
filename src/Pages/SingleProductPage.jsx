@@ -10,48 +10,42 @@ const SingleProduct = () => {
   return (
     <Wrapper>
       {tops.map((top) => {
-        var { id, name, imagen1, imagen2,imagen3, precio, color } = top;
+        var { id, name, imagen1, imagen2, imagen3, precio, color } = top;
         const [main, setMain] = useState(imagen1);
         if (id === parametro) {
           return (
             <div key={id}>
               <PageHero title={name} product></PageHero>
-              <div className="product-card">
-                <div className="producto-image">
-                  <Link to={main}>
-                    <img src={main} className="main" alt={name}></img>
-                  </Link>
-                  <div className="gallery">
-                  <img
-                      src={imagen1}
-                      alt="1"
-                      onClick={() => setMain(imagen1)}
-                    />
-                    <img
-                      src={imagen2}
-                      alt="2"
-                      onClick={() => setMain(imagen2)}
-                    />
-                    <img
-                      src={imagen3}
-                      alt="3"
-                      onClick={() => setMain(imagen3)}
-                    />
-                  </div>
+              
+              <div className="contenedor">
+                <div className="product-card">
+                  <div className="producto-image">
+                    <Link to={main}>
+                      <img src={main} className="main" alt={name}></img>
+                    </Link>
+                    <div className="gallery">
+                      <img
+                        src={imagen1}
+                        alt="1"
+                        onClick={() => setMain(imagen1)}
+                      />
+                      <img
+                        src={imagen2}
+                        alt="2"
+                        onClick={() => setMain(imagen2)}
+                      />
+                      <img
+                        src={imagen3}
+                        alt="3"
+                        onClick={() => setMain(imagen3)}
+                      />
+                    </div>
+                  </div>{" "}
                 </div>
                 <div className="descripcion">
-                  <h5 className="titulo">{name}</h5>
+                  <h5 className="titulo">Top {name}</h5>
                   <p className="price">${precio}</p>
                   <div className="icons">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25"
-                      fill="currentColor"
-                      className="bi bi-cart"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                    </svg>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="25"
@@ -64,6 +58,21 @@ const SingleProduct = () => {
                   </div>
                 </div>
               </div>
+              <div className="contenedor-cart">
+              <button className="cart">
+                agregar a carrito
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  fill="currentColor"
+                  className="bi bi-cart"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg>
+              </button>
+              </div>
+             
             </div>
           );
         }
@@ -73,56 +82,80 @@ const SingleProduct = () => {
 };
 
 const Wrapper = styled.section`
+  .contenedor {
+    display: flex;
+    flex-direction: column;  
+  }
 
   .product-card {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 1rem auto 0;
+    background-color: black;
   }
 
-  .main{
-    display : flex;
-    max-width: 14rem;
-    object-fit: contain;
+  .main {
+    max-height: 25rem;
+    border: solid 1px black;
   }
 
   .image2 {
     display: none;
   }
 
-  .producto-image{
-
+  .producto-image {
+    display: flex;
   }
 
   .gallery {
-    margin: .5rem auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    max-height: 25rem;
+    margin: 0 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2px;
     img {
-      height: 95px;
+      max-height: 8.2rem;
       cursor: pointer;
-      border: solid 1px black
+   
     }
   }
 
-  .descripcion{
-    display: flex;
-    background-color:var(--cafe);
-    align-items: center;
+  .descripcion {
+    background-color: var(--cafe);
     justify-content: center;
-    flex-direction: column;
-    min-width: 8rem;
-    h5{
-      font-size: 1rem;
-    }
-    .icons{
+    align-items: center;
+    display: flex;
+    margin: 5px auto;
+    width: 25rem;
+  
+    .icons {
       display: flex;
       flex-direction: column;
-      svg{
+      svg {
         margin: 1rem 0;
       }
     }
+  }
+
+  .cart {
+    display: flex;
+    margin: 1rem auto;
+    width: 25rem;
+    justify-content: center;
+    gap: 10px;
+    position: sticky;
+  
+  }
+
+  .contenedor-cart{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    height: 100px;
+    background-color: var(--azul);
+
   }
 
   @media (min-width: 992px) {
