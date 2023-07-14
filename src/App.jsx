@@ -12,6 +12,7 @@ import Chat from "./components/Chat";
 import ServicioCliente from "./Pages/ServicioClientePage";
 import LikePage from "./Pages/LikePage";
 import { useState } from "react";
+import Cartbar from "./components/Cartbar";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -21,7 +22,9 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Sidebar /> <Chat />
+      <Sidebar />
+      <Cartbar/>
+       <Chat />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

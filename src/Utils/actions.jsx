@@ -1,5 +1,7 @@
 export const SIDEBAR_OPEN = 'SIDEBAR_OPEN'
 export const SIDEBAR_CLOSE = 'SIDEBAR_CLOSE'
+export const CARTBAR_OPEN = 'CARTBAR_OPEN'
+export const CARTBAR_CLOSE = 'CARTBAR_CLOSE'
 export const SET_GRIDVIEW = 'SET_GRIDVIEW'
 export const SET_LISTVIEW = 'SET_LISTVIEW'
 export const ADD_TO_CART = 'ADD_TO_CART'

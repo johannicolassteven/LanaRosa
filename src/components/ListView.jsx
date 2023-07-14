@@ -55,8 +55,7 @@ const ListView = ({ tops }) => {
 };
 
 const WrapperList = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
+ 
   margin: 2rem 0;
   a:link, a:visited, a:active {
     text-decoration:none;
@@ -67,12 +66,16 @@ const WrapperList = styled.section`
     margin: 0.2rem 0;
   }
 
+  .product-card{
+    margin: auto;
+    width: 85%;
+  }
+
   img {
     display: flex;
     margin: auto;
     z-index: -2;
-    max-width: 20.5rem;
-    min-width: 1rem;
+    width:100%
   }
 
   .image2 {
@@ -80,7 +83,7 @@ const WrapperList = styled.section`
   }
 
   .descripcion {
-    background-color: var(--azul2);
+    background-color: var(--azul);
     padding-bottom: 5px;
   }
 
@@ -109,10 +112,21 @@ const WrapperList = styled.section`
     margin: 0 2rem 0.2rem;
   }
 
+  @media (min-width: 530px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+  }
+
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+
+    .product-card{
+    width: 70%;
+  }
+
   }
 `;
 
