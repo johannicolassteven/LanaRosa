@@ -164,7 +164,7 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     bottom: 0;
-    height: 100px;
+    height: 40px;
     background-color: var(--azul);
     button:active {
       background-color: #008000a7;

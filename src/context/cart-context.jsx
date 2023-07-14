@@ -9,9 +9,7 @@ const reducer = (state, action) => {
 
 export function CartProvider ({ children }) {
  
-  const [cart, setCart] = useState([])
-
-  
+  const [cart, setCart] = useState([])  
    
 const addToCart = product => {
  const productInCart = cart.findIndex(item => item.id === product.id)

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const Carousel = () => {
   return (
     <Wrapper>
-      <div id="carouselExampleIndicators" className="carousel slide">
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button
             type="button"
@@ -31,7 +31,7 @@ const Carousel = () => {
         </div>
 
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          <div className="carousel-item active" data-bs-interval="2000">
             <Link to="/products">
               <img
                 src="https://i.ibb.co/s6gThXB/Negro1.jpg"
@@ -40,7 +40,7 @@ const Carousel = () => {
               />
             </Link>
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" data-bs-interval="2000">
             <Link to="/products">
               <img
                 src="https://i.ibb.co/NFZnHcv/Blanco-Top2.jpg"
@@ -146,10 +146,11 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 920px) {
-    width: 70%;
+
+    width: 50%;
     img {
       object-position: 0% 60%;
-      min-height: 40rem;
+      min-height: 20rem;
     }
   }
 `;

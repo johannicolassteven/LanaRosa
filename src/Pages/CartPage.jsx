@@ -10,7 +10,7 @@ const CartPage = () => {
   let totalidad = cart.reduce((acum, total) => {
     return acum + total.quantity*total.precio
   }, 0)
-  console.log(totalidad)
+
 
   return (
     <Wrapper>

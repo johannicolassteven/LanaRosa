@@ -5,9 +5,9 @@ import { useProductsContext } from "../context/products-context";
 import { useCart } from "../context/useCart";
 
 const Navbar = () => {
-  const {addToCart,removeFromCart, cart, clearCart, } = useCart();
+  const {cart } = useCart();
   const { openSidebar } = useProductsContext();
-  {console.log(cart.length)}
+
   return (
     <NavContainer>
       <div className="nav">
