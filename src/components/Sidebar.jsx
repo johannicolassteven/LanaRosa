@@ -70,7 +70,7 @@ const Sidebar = () => {
         </div>
       </aside>
       <div
-        className={`${isSidebarOpen ? "cerrar show-cerrar" : "cerrar"}`}
+        className={`${isSidebarOpen ? "cerrar show-cerrar" : "cerrar"}`} 
         onClick={closeSidebar}
       ></div>
     </SidebarContainer>

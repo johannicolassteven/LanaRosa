@@ -2,7 +2,6 @@
 import React, { useContext, useEffect, useReducer } from 'react'
 import reducer from './products-reducer.jsx'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE} from '../Utils/actions.jsx'
-import { tops } from '../../db.jsx'
 
 
 const initialState = {
