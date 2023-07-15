@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/products-context";
 import styled from "styled-components";
 import { useCart } from "../context/useCart";
-import CartPage from "../Pages/CartPage";
+import CartPage from "./CartView";
 
 const Cartbar = () => {
   const { isCartbarOpen, closeCartbar } = useProductsContext();
   const { cart, clearCart, removeFromCart, addToCart, cleartoCart } = useCart();
-  let totalidad = cart.reduce((acum, total) => {
-    return acum + total.quantity * total.precio;
-  }, 0);
   return (
     <SidebarContainer>
       <aside
@@ -29,9 +26,7 @@ const Cartbar = () => {
             </svg>
           </button>
         </div>
-        <div>
-        <CartPage></CartPage>
-      </div>
+       <CartPage></CartPage>
       </aside>
       <div
         className={`${isCartbarOpen ? "cerrar show-cerrar" : "cerrar"}`} 
@@ -45,7 +40,6 @@ const Cartbar = () => {
 };
 
 const SidebarContainer = styled.div`
-
 
 
   .cerrar {
@@ -71,6 +65,7 @@ const SidebarContainer = styled.div`
     align-items: center;
     padding:  1.5rem;
     background-color: #ffffff;
+    position: sticky;
  
   }
 
@@ -82,7 +77,6 @@ const SidebarContainer = styled.div`
 
 
   .sidebar {
-    overflow: auto;
     position: fixed;
     top: 0;
     left: 0;

@@ -7,11 +7,12 @@ import CartContext from "../context/cart-context";
 import { useCart } from "../context/useCart";
 
 const SingleProduct = () => {
-  const { addToCart, removeFromCart, cart, clearCart, cleartoCart } = useCart();
-
+  const { addToCart, cart,} = useCart();
   const checkProductInCart = (product) => {
     return cart.some((item) => item.id === product.id);
+    
   };
+
 
   const { ide } = useParams();
   var parametro = parseInt(ide);
@@ -20,9 +21,10 @@ const SingleProduct = () => {
       {tops.map((top) => {
         const isProductInCart = checkProductInCart(top);
         var { id, name, imagen1, imagen2, imagen3, precio, color } = top;
-        const [main, setMain] = useState(imagen1);
+        const [main, setMain] = useState(imagen1);  
         if (id === parametro) {
           return (
+          
             <div key={id}>
               <PageHero title={name} product></PageHero>
 
@@ -33,7 +35,9 @@ const SingleProduct = () => {
                       <Link to={main}>
                         <img src={main} className="main" alt={name}></img>
                       </Link>
-                      <div className="gallery">
+                      
+                    </div>
+                  </div><div className="gallery">
                         <img
                           src={imagen1}
                           alt="1"
@@ -50,8 +54,6 @@ const SingleProduct = () => {
                           onClick={() => setMain(imagen3)}
                         />
                       </div>
-                    </div>{" "}
-                  </div>
                   <div className="descripcion">
                     <h5 className="titulo">Top {name}</h5>
                     <div className="icons">
@@ -70,6 +72,7 @@ const SingleProduct = () => {
               </div>
               <div className="contenedor-cart">
                 <button className="cart" onClick={() => addToCart(top)}>
+                  
                   {precio}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -92,19 +95,19 @@ const SingleProduct = () => {
 };
 
 const Wrapper = styled.section`
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-  }
+
 
   .none {
     display: none;
   }
 
   .carta {
+    width: 70%;
     margin: 1rem auto 0;
-    background-color: black;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .product-card {
@@ -113,7 +116,7 @@ const Wrapper = styled.section`
   }
 
   .main {
-    max-height: 25rem;
+    max-width: 100%;
     border: solid 1px black;
   }
 
@@ -121,30 +124,28 @@ const Wrapper = styled.section`
     display: none;
   }
 
-  .producto-image {
-    display: flex;
-  }
-
+ 
   .gallery {
-    max-height: 25rem;
-    margin: 0 0.1rem;
+    width:100%;
+    max-width: 641px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 2px;
+    gap: 1px;
+    background-color: black;
     img {
-      max-height: 8.2rem;
+      max-width: 33%;
       cursor: pointer;
     }
   }
 
   .descripcion {
+    width: 100%;
     background-color: var(--cafe);
     justify-content: center;
     align-items: center;
     display: flex;
     padding: 1rem 0;
-    margin: 0 1px 1px;
+    margin: 1rem 1px 1px;
     gap: 20px;
   }
 
