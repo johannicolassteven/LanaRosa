@@ -37,7 +37,7 @@ const CartPage = () => {
                       </svg>
                     </button>
                     {quantity.toString()}
-                    <button onClick={() => addToCart(item)}>
+                    <button on onClick={() => addToCart(item)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="10"
