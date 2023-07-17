@@ -49,7 +49,7 @@ const SidebarContainer = styled.div`
     height: 100%;
     background: #00000083;
     transition: 0s;
-    transform: translate(-100%);
+    transform: translate(100%);
     z-index: -1;
   }
 
@@ -86,7 +86,7 @@ const SidebarContainer = styled.div`
     height: 100%;
    background-color: white;
     transition: 0.2s;
-    transform: translate(150%);
+    transform: translate(100%);
     z-index: -1;
 
   }
@@ -108,10 +108,17 @@ const SidebarContainer = styled.div`
     border: none;
   }
 
+  @media (min-width: 575px){
+    .sidebar {
+     width: 65%;
+     margin-left:35%;
+  }
+  }
+
   @media screen and (min-width: 992px) {
     .sidebar {
-     width: 40%;
-     margin-left:60%;
+     width: 37%;
+     margin-left:63%;
   }}
 `;
 

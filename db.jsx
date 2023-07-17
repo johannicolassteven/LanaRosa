@@ -1,6 +1,6 @@
 export const tops = [
     {
-      "id": 1,
+      "id": "aW126j",
       "name": "Delicate",
       "color": "Negro",
       "precio": "55.000",
@@ -12,7 +12,7 @@ export const tops = [
     },
 
     {
-      "id": 2,
+      "id": "2",
       "name": "August",
       "color": "Blanco",
       "precio": "55.000",
@@ -22,7 +22,7 @@ export const tops = [
 
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Day Light",
       "color": "Rosado",
       "precio": "55.000",
@@ -33,7 +33,7 @@ export const tops = [
     },
 
     {
-      "id": 4,
+      "id": "4",
       "name": "Cruel Summer",
       "color": "Fuccia",
       "precio": "55.000",
@@ -43,7 +43,7 @@ export const tops = [
 
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Our Song",
       "color": "Negro",
       "precio": "60.000",
@@ -54,7 +54,7 @@ export const tops = [
     },
 
     {
-      "id": 6,
+      "id": "6",
       "name": "Stay Beautifull",
       "color": "Azul Claro",
       "precio": "50.000",

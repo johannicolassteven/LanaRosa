@@ -36,7 +36,7 @@ const CartPage = () => {
                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
                       </svg>
                     </button>
-                    {quantity.toString()}
+                    <p>{quantity}</p>
                     <button on onClick={() => addToCart(item)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +104,6 @@ const Fill = styled.section`
     margin: 5rem;
     min-height: 50vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 5rem;
     text-align: center;
     button {
@@ -130,7 +128,7 @@ const Wrapper = styled.section`
   }
 
   img {
-    max-width: 9rem;
+    max-width: 10rem;
   }
 
   .descripcion {
@@ -141,7 +139,7 @@ const Wrapper = styled.section`
     background-color: var(--azul);
     padding-bottom: 5px;
     text-align: center;
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .botones {
@@ -188,12 +186,12 @@ const Wrapper = styled.section`
     position: sticky;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 575px) {
     .product-card {
     }
 
     img {
-      max-width: 12rem;
+      max-width: 15rem;
     }
   }
 `;

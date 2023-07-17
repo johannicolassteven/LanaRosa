@@ -9,17 +9,17 @@ const SingleProduct = () => {
   const { addToCart, cart } = useCart();
   const checkProductInCart = (product) => {
     return cart.some((item) => item.id === product.id);
-  };
+  }; 
 
   const { ide } = useParams();
-  var parametro = parseInt(ide);
+ 
   return (
     <Wrapper>
       {tops.map((top) => {
         const isProductInCart = checkProductInCart(top);
         var { id, name, imagen1, imagen2, imagen3, precio, color } = top;
         const [main, setMain] = useState(imagen1);
-        if (id === parametro) {
+        if (id === ide) {
           return (
             <div key={id}>
               <PageHero title={name} product></PageHero>
