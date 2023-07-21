@@ -37,7 +37,7 @@ const CartPage = () => {
                       </svg>
                     </button>
                     <p>{quantity}</p>
-                    <button on onClick={() => addToCart(item)}>
+                    <button onClick={() => addToCart(item)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="10"
@@ -52,8 +52,7 @@ const CartPage = () => {
                       </svg>
                     </button>
                   </div>
-                  <p>${precio} </p>
-                  <p>total: {parseInt(precio) * quantity * 1000}</p>
+                  <p>${precio}</p>
                   <button
                     className="remover "
                     onClick={() => removeFromCart(item)}
@@ -104,6 +103,7 @@ const Fill = styled.section`
     margin: 5rem;
     min-height: 50vh;
     display: flex;
+    flex-direction: column;
     gap: 5rem;
     text-align: center;
     button {
